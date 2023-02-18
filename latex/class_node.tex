@@ -1,0 +1,286 @@
+\hypertarget{class_node}{}\doxysection{Node Class Reference}
+\label{class_node}\index{Node@{Node}}
+
+
+Représente un nœud graphique dans un widget graphique et hérite de la classe QGraphics\+Item de la bibliothèque graphique Qt.  
+
+
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+Inheritance diagram for Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_node}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_node_ae716c5198bdf4b0a810324756b0f8f11}\label{class_node_ae716c5198bdf4b0a810324756b0f8f11}} 
+enum \{ {\bfseries Type} = User\+Type + 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_node_a72149de5b23dacbb1ec0e39e4ccaae9c}{Node}} (\mbox{\hyperlink{class_graph_widget}{Graph\+Widget}} $\ast$graph\+Widget, int node\+Size, QString \mbox{\hyperlink{class_node_a85e9bb923311a0a912f6698b3b5d6119}{names}}, QColor color1, QColor color2)
+\begin{DoxyCompactList}\small\item\em Constructeur qui crée un nouvel objet \mbox{\hyperlink{class_node}{Node}} avec les informations fournies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_af761aaef36a761a90c4f148a6add914d}{add\+Edge}} (\mbox{\hyperlink{class_edge}{Edge}} $\ast$edge)
+\begin{DoxyCompactList}\small\item\em Ajoute une arête à la liste d\textquotesingle{}arêtes du nœud. \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{class_node_a07ef0b35412d954c6e585c25377830ff}{edges}} () const
+\begin{DoxyCompactList}\small\item\em edges \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a04fc95313708abe00ecc64d5ac014f26}{set\+Color}} (QColor color)
+\begin{DoxyCompactList}\small\item\em modifie la couleur du node \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_node_af48418d690ba7a21aea37168beaa865a}{type}} () const override
+\begin{DoxyCompactList}\small\item\em type \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_node_ad072483ca1a8d884964cddef6b3e7f6f}\label{class_node_ad072483ca1a8d884964cddef6b3e7f6f}} 
+void {\bfseries calculate\+Forces} ()
+\begin{DoxyCompactList}\small\item\em Calcule les forces qui agissent sur le nœud. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_node_a60605ce8c5281cad180745359f833cc4}{advance\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Avance la position du nœud selon les forces calculées. \end{DoxyCompactList}\item 
+QRectF \mbox{\hyperlink{class_node_a327ee966db1211cee4b9759bd928580a}{bounding\+Rect}} () const override
+\begin{DoxyCompactList}\small\item\em bounding\+Rect \end{DoxyCompactList}\item 
+QPainter\+Path \mbox{\hyperlink{class_node_a0b1a8467340a3554ac57b43f56a90818}{shape}} () const override
+\begin{DoxyCompactList}\small\item\em shape \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a35fd12d92a7ca5d7679c81ab6747a764}{paint}} (QPainter $\ast$painter, const QStyle\+Option\+Graphics\+Item $\ast$option, QWidget $\ast$widget) override
+\begin{DoxyCompactList}\small\item\em Dessine le nœud. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_node_a7be69c7d2d91f76f08e78fc80122ef03}{get\+Node\+Size}} () const
+\begin{DoxyCompactList}\small\item\em get\+Node\+Size \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_node_a85e9bb923311a0a912f6698b3b5d6119}\label{class_node_a85e9bb923311a0a912f6698b3b5d6119}} 
+QString {\bfseries names}
+\begin{DoxyCompactList}\small\item\em Le nom du nœud. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_node_a6781a011f18d45452e0db1147678990b}\label{class_node_a6781a011f18d45452e0db1147678990b}} 
+bool {\bfseries is\+Selected}
+\begin{DoxyCompactList}\small\item\em Savoir si le noeud est selectionné par l\textquotesingle{}utilisateur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_node_a8346d756cdbef100f93749ef8ded78bf}\label{class_node_a8346d756cdbef100f93749ef8ded78bf}} 
+QColor {\bfseries color\+User}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+QVariant \mbox{\hyperlink{class_node_a18959a6037e96225835e07a32b4024ed}{item\+Change}} (Graphics\+Item\+Change change, const QVariant \&value) override
+\begin{DoxyCompactList}\small\item\em Est appelé lorsqu\textquotesingle{}il y a un changement dans l\textquotesingle{}objet \mbox{\hyperlink{class_node}{Node}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a2412d8007e9fd9cd1e3bf7afee57906e}{mouse\+Press\+Event}} (QGraphics\+Scene\+Mouse\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em Est appelé lorsqu\textquotesingle{}un bouton de la souris est pressé sur le nœud. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_afc1bc6e8ea97c95e6ced177e828f70e9}{mouse\+Release\+Event}} (QGraphics\+Scene\+Mouse\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em mouse\+Release\+Event Est ppelée lorsqu\textquotesingle{}un bouton de la souris est relâché \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Représente un nœud graphique dans un widget graphique et hérite de la classe QGraphics\+Item de la bibliothèque graphique Qt. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_node_a72149de5b23dacbb1ec0e39e4ccaae9c}\label{class_node_a72149de5b23dacbb1ec0e39e4ccaae9c}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph_widget}{Graph\+Widget}} $\ast$}]{graph\+Widget,  }\item[{int}]{node\+Size,  }\item[{QString}]{names,  }\item[{QColor}]{color1,  }\item[{QColor}]{color2 }\end{DoxyParamCaption})}
+
+
+
+Constructeur qui crée un nouvel objet \mbox{\hyperlink{class_node}{Node}} avec les informations fournies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+Widget} & un pointeur vers le widget graphique parent. \\
+\hline
+{\em node\+Size} & la taille du nœud. \\
+\hline
+{\em names} & le nom du nœud. \\
+\hline
+{\em color1} & la couleur principale du nœud. \\
+\hline
+{\em color2} & la couleur secondaire du nœud. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_node_af761aaef36a761a90c4f148a6add914d}\label{class_node_af761aaef36a761a90c4f148a6add914d}} 
+\index{Node@{Node}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Node\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_edge}{Edge}} $\ast$}]{edge }\end{DoxyParamCaption})}
+
+
+
+Ajoute une arête à la liste d\textquotesingle{}arêtes du nœud. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge} & l\textquotesingle{}arête à ajouter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a60605ce8c5281cad180745359f833cc4}\label{class_node_a60605ce8c5281cad180745359f833cc4}} 
+\index{Node@{Node}!advancePosition@{advancePosition}}
+\index{advancePosition@{advancePosition}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{advancePosition()}{advancePosition()}}
+{\footnotesize\ttfamily bool Node\+::advance\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Avance la position du nœud selon les forces calculées. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_a327ee966db1211cee4b9759bd928580a}\label{class_node_a327ee966db1211cee4b9759bd928580a}} 
+\index{Node@{Node}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{boundingRect()}{boundingRect()}}
+{\footnotesize\ttfamily QRectF Node\+::bounding\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+bounding\+Rect 
+
+\begin{DoxyReturn}{Returns}
+Retourne le rectangle englobant du nœud. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_a07ef0b35412d954c6e585c25377830ff}\label{class_node_a07ef0b35412d954c6e585c25377830ff}} 
+\index{Node@{Node}!edges@{edges}}
+\index{edges@{edges}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{edges()}{edges()}}
+{\footnotesize\ttfamily QList$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ Node\+::edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+edges 
+
+\begin{DoxyReturn}{Returns}
+la liste d\textquotesingle{}arêtes associées au nœud. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_a7be69c7d2d91f76f08e78fc80122ef03}\label{class_node_a7be69c7d2d91f76f08e78fc80122ef03}} 
+\index{Node@{Node}!getNodeSize@{getNodeSize}}
+\index{getNodeSize@{getNodeSize}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getNodeSize()}{getNodeSize()}}
+{\footnotesize\ttfamily int Node\+::get\+Node\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Node\+Size 
+
+\begin{DoxyReturn}{Returns}
+la taille du nœud. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_a18959a6037e96225835e07a32b4024ed}\label{class_node_a18959a6037e96225835e07a32b4024ed}} 
+\index{Node@{Node}!itemChange@{itemChange}}
+\index{itemChange@{itemChange}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{itemChange()}{itemChange()}}
+{\footnotesize\ttfamily QVariant Node\+::item\+Change (\begin{DoxyParamCaption}\item[{Graphics\+Item\+Change}]{change,  }\item[{const QVariant \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Est appelé lorsqu\textquotesingle{}il y a un changement dans l\textquotesingle{}objet \mbox{\hyperlink{class_node}{Node}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em change} & le type de changement. \\
+\hline
+{\em value} & la valeur associée au changement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_a2412d8007e9fd9cd1e3bf7afee57906e}\label{class_node_a2412d8007e9fd9cd1e3bf7afee57906e}} 
+\index{Node@{Node}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{mousePressEvent()}{mousePressEvent()}}
+{\footnotesize\ttfamily void Node\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{QGraphics\+Scene\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Est appelé lorsqu\textquotesingle{}un bouton de la souris est pressé sur le nœud. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & l\textquotesingle{}événement de souris. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_afc1bc6e8ea97c95e6ced177e828f70e9}\label{class_node_afc1bc6e8ea97c95e6ced177e828f70e9}} 
+\index{Node@{Node}!mouseReleaseEvent@{mouseReleaseEvent}}
+\index{mouseReleaseEvent@{mouseReleaseEvent}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{mouseReleaseEvent()}{mouseReleaseEvent()}}
+{\footnotesize\ttfamily void Node\+::mouse\+Release\+Event (\begin{DoxyParamCaption}\item[{QGraphics\+Scene\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+mouse\+Release\+Event Est ppelée lorsqu\textquotesingle{}un bouton de la souris est relâché 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a35fd12d92a7ca5d7679c81ab6747a764}\label{class_node_a35fd12d92a7ca5d7679c81ab6747a764}} 
+\index{Node@{Node}!paint@{paint}}
+\index{paint@{paint}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Node\+::paint (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter,  }\item[{const QStyle\+Option\+Graphics\+Item $\ast$}]{option,  }\item[{QWidget $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Dessine le nœud. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & le peintre utilisé pour dessiner le nœud. \\
+\hline
+{\em option} & les options de style pour dessiner le nœud. \\
+\hline
+{\em widget} & le widget parent du nœud. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a04fc95313708abe00ecc64d5ac014f26}\label{class_node_a04fc95313708abe00ecc64d5ac014f26}} 
+\index{Node@{Node}!setColor@{setColor}}
+\index{setColor@{setColor}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Node\+::set\+Color (\begin{DoxyParamCaption}\item[{QColor}]{color }\end{DoxyParamCaption})}
+
+
+
+modifie la couleur du node 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Une} & couleur valide \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a0b1a8467340a3554ac57b43f56a90818}\label{class_node_a0b1a8467340a3554ac57b43f56a90818}} 
+\index{Node@{Node}!shape@{shape}}
+\index{shape@{shape}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{shape()}{shape()}}
+{\footnotesize\ttfamily QPainter\+Path Node\+::shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+shape 
+
+\begin{DoxyReturn}{Returns}
+Retourne la forme du nœud. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_af48418d690ba7a21aea37168beaa865a}\label{class_node_af48418d690ba7a21aea37168beaa865a}} 
+\index{Node@{Node}!type@{type}}
+\index{type@{type}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily int Node\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+type 
+
+\begin{DoxyReturn}{Returns}
+le type du nœud. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+node.\+h\item 
+node.\+cpp\end{DoxyCompactItemize}

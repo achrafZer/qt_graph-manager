@@ -1,0 +1,67 @@
+\hypertarget{node_8h_source}{}\doxysection{node.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NODE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NODE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QGraphicsItem>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QList>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_edge}{Edge}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graph_widget}{GraphWidget}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_node}{Node}}\ :\ \textcolor{keyword}{public}\ QGraphicsItem}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_node}{Node}}(\mbox{\hyperlink{class_graph_widget}{GraphWidget}}\ *graphWidget,\ \textcolor{keywordtype}{int}\ nodeSize,QString\ \mbox{\hyperlink{class_node_a85e9bb923311a0a912f6698b3b5d6119}{names}},QColor\ color1,\ QColor\ color2);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_af761aaef36a761a90c4f148a6add914d}{addEdge}}(\mbox{\hyperlink{class_edge}{Edge}}\ *edge);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ QList<Edge\ *>\ \mbox{\hyperlink{class_node_a07ef0b35412d954c6e585c25377830ff}{edges}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_a04fc95313708abe00ecc64d5ac014f26}{setColor}}(QColor\ color);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{enum}\ \{\ Type\ =\ UserType\ +\ 1\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_node_af48418d690ba7a21aea37168beaa865a}{type}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ Type;\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_ad072483ca1a8d884964cddef6b3e7f6f}{calculateForces}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_node_a60605ce8c5281cad180745359f833cc4}{advancePosition}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ QRectF\ \mbox{\hyperlink{class_node_a327ee966db1211cee4b9759bd928580a}{boundingRect}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ QPainterPath\ \mbox{\hyperlink{class_node_a0b1a8467340a3554ac57b43f56a90818}{shape}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_a35fd12d92a7ca5d7679c81ab6747a764}{paint}}(QPainter\ *painter,\ \textcolor{keyword}{const}\ QStyleOptionGraphicsItem\ *option,\ QWidget\ *widget)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_node_a7be69c7d2d91f76f08e78fc80122ef03}{getNodeSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \ \ \ \ QString\ \ \mbox{\hyperlink{class_node_a85e9bb923311a0a912f6698b3b5d6119}{names}};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_node_a6781a011f18d45452e0db1147678990b}{isSelected}};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ QColor\ colorUser;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00111\ \ \ \ \ QVariant\ \mbox{\hyperlink{class_node_a18959a6037e96225835e07a32b4024ed}{itemChange}}(GraphicsItemChange\ change,\ \textcolor{keyword}{const}\ QVariant\ \&value)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_a2412d8007e9fd9cd1e3bf7afee57906e}{mousePressEvent}}(QGraphicsSceneMouseEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_node_afc1bc6e8ea97c95e6ced177e828f70e9}{mouseReleaseEvent}}(QGraphicsSceneMouseEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00126\ \ \ \ \ QList<Edge\ *>\ edgeList;}
+\DoxyCodeLine{00127\ \ \ \ \ QPointF\ newPos;}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{class_graph_widget}{GraphWidget}}\ *graph;}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{int}\ nodeSize;}
+\DoxyCodeLine{00130\ \ \ \ \ QColor\ colorUsed;}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NODE\_H}}
+
+\end{DoxyCode}

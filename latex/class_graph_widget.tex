@@ -1,0 +1,183 @@
+\hypertarget{class_graph_widget}{}\doxysection{Graph\+Widget Class Reference}
+\label{class_graph_widget}\index{GraphWidget@{GraphWidget}}
+Inheritance diagram for Graph\+Widget\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graph_widget}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_widget_a7d6d1788eba5dcebe750ce08aee4d614}\label{class_graph_widget_a7d6d1788eba5dcebe750ce08aee4d614}} 
+void {\bfseries shuffle} ()
+\begin{DoxyCompactList}\small\item\em Déplace les éléments de manière aléatoire. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_widget_a89aa46ebccc40f6ba1e25b2ef18b82cc}\label{class_graph_widget_a89aa46ebccc40f6ba1e25b2ef18b82cc}} 
+void {\bfseries zoom\+In} ()
+\begin{DoxyCompactList}\small\item\em Zoome dans la vue. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_widget_afccca31b4490ec38718b437e78740777}\label{class_graph_widget_afccca31b4490ec38718b437e78740777}} 
+void {\bfseries zoom\+Out} ()
+\begin{DoxyCompactList}\small\item\em Zoome hors de la vue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_widget_aaf89c6b65071f2a98872849570fb29be}{add\+Item}} (QGraphics\+Item $\ast$graphics\+Item)
+\begin{DoxyCompactList}\small\item\em Ajoute un élément graphique à la scène. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_widget_a50c545c7345d00813bb8185d11bf015b}\label{class_graph_widget_a50c545c7345d00813bb8185d11bf015b}} 
+void {\bfseries remove\+Item} (QGraphics\+Item $\ast$graphics\+Item)
+\item 
+void \mbox{\hyperlink{class_graph_widget_a5505968a2cb463b84e0af76091300e52}{create\+From\+Table}} (QList$<$ QMap$<$ QString, int $>$ $>$ \&datas)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_graph_widget_a5505968a2cb463b84e0af76091300e52}{Graph\+Widget\+::create\+From\+Table}} genere tous les noeuds et les liasons qu\textquotesingle{}il faut pour pouvoir avoir un graph qui correspond au données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_widget_a6df7c301e5551dff21bbdc5b6cd7ffc9}{Graph\+Widget}} (QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_graph_widget}{Graph\+Widget}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_widget_a3151de180b65d71f424aba5bc274978e}{item\+Moved}} ()
+\begin{DoxyCompactList}\small\item\em Méthode appelée lorsqu\textquotesingle{}un élément du graphe est déplacé La méthode effectue un contrôle sur la variable timer\+Id. Si timer\+Id est nul, cela signifie que le timer n\textquotesingle{}a pas été démarré et la méthode démarre un nouveau timer en appelant la méthode start\+Timer avec un intervalle de temps de 1000 / 25 millisecondes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_widget_a646e6befd02ce953c3454397dc093b62}\label{class_graph_widget_a646e6befd02ce953c3454397dc093b62}} 
+QList$<$ QList$<$ \mbox{\hyperlink{class_node}{Node}} $\ast$ $>$ $>$ {\bfseries save}
+\item 
+\mbox{\Hypertarget{class_graph_widget_a55c6a6efdf44e075296cdb21389eb97e}\label{class_graph_widget_a55c6a6efdf44e075296cdb21389eb97e}} 
+QList$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ {\bfseries save\+Edge}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_graph_widget_ac62c85e6775020bf5820048f0e02025d}{key\+Press\+Event}} (QKey\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em Gère les événements de la souris. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_widget_a206371195f6df1aaf5bd9b738085da9c}{timer\+Event}} (QTimer\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em Gère les événements du timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_widget_a900dc01eeaed285841280ece387f6c5a}{draw\+Background}} (QPainter $\ast$painter, const QRectF \&rect) override
+\begin{DoxyCompactList}\small\item\em Dessine le fond de la scène. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_widget_a53052eaaed3777d102e6659e3357983e}{scale\+View}} (qreal scale\+Factor)
+\begin{DoxyCompactList}\small\item\em Zoom sur la scène. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_widget_a6df7c301e5551dff21bbdc5b6cd7ffc9}\label{class_graph_widget_a6df7c301e5551dff21bbdc5b6cd7ffc9}} 
+\index{GraphWidget@{GraphWidget}!GraphWidget@{GraphWidget}}
+\index{GraphWidget@{GraphWidget}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{GraphWidget()}{GraphWidget()}}
+{\footnotesize\ttfamily Graph\+Widget\+::\+Graph\+Widget (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \mbox{\hyperlink{class_graph_widget}{Graph\+Widget}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Pointeur vers le widget parent \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_widget_aaf89c6b65071f2a98872849570fb29be}\label{class_graph_widget_aaf89c6b65071f2a98872849570fb29be}} 
+\index{GraphWidget@{GraphWidget}!addItem@{addItem}}
+\index{addItem@{addItem}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{addItem}{addItem}}
+{\footnotesize\ttfamily void Graph\+Widget\+::add\+Item (\begin{DoxyParamCaption}\item[{QGraphics\+Item $\ast$}]{graphics\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Ajoute un élément graphique à la scène. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics\+Item} & Elément graphique à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_widget_a5505968a2cb463b84e0af76091300e52}\label{class_graph_widget_a5505968a2cb463b84e0af76091300e52}} 
+\index{GraphWidget@{GraphWidget}!createFromTable@{createFromTable}}
+\index{createFromTable@{createFromTable}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{createFromTable}{createFromTable}}
+{\footnotesize\ttfamily void Graph\+Widget\+::create\+From\+Table (\begin{DoxyParamCaption}\item[{QList$<$ QMap$<$ QString, int $>$ $>$ \&}]{datas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_graph_widget_a5505968a2cb463b84e0af76091300e52}{Graph\+Widget\+::create\+From\+Table}} genere tous les noeuds et les liasons qu\textquotesingle{}il faut pour pouvoir avoir un graph qui correspond au données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & regroupe toutes les données qu\textquotesingle{}il nous faut pour pouvoir faire la cr\&ation des noeuds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_widget_a900dc01eeaed285841280ece387f6c5a}\label{class_graph_widget_a900dc01eeaed285841280ece387f6c5a}} 
+\index{GraphWidget@{GraphWidget}!drawBackground@{drawBackground}}
+\index{drawBackground@{drawBackground}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{drawBackground()}{drawBackground()}}
+{\footnotesize\ttfamily void Graph\+Widget\+::draw\+Background (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter,  }\item[{const QRectF \&}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Dessine le fond de la scène. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Pointeur vers le peintre utilisé pour dessiner \\
+\hline
+{\em rect} & Rectangle définissant la zone à dessiner \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_widget_a3151de180b65d71f424aba5bc274978e}\label{class_graph_widget_a3151de180b65d71f424aba5bc274978e}} 
+\index{GraphWidget@{GraphWidget}!itemMoved@{itemMoved}}
+\index{itemMoved@{itemMoved}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{itemMoved()}{itemMoved()}}
+{\footnotesize\ttfamily void Graph\+Widget\+::item\+Moved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Méthode appelée lorsqu\textquotesingle{}un élément du graphe est déplacé La méthode effectue un contrôle sur la variable timer\+Id. Si timer\+Id est nul, cela signifie que le timer n\textquotesingle{}a pas été démarré et la méthode démarre un nouveau timer en appelant la méthode start\+Timer avec un intervalle de temps de 1000 / 25 millisecondes. 
+
+\mbox{\Hypertarget{class_graph_widget_ac62c85e6775020bf5820048f0e02025d}\label{class_graph_widget_ac62c85e6775020bf5820048f0e02025d}} 
+\index{GraphWidget@{GraphWidget}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void Graph\+Widget\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Gère les événements de la souris. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Pointeur vers l\textquotesingle{}événement souris \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_widget_a53052eaaed3777d102e6659e3357983e}\label{class_graph_widget_a53052eaaed3777d102e6659e3357983e}} 
+\index{GraphWidget@{GraphWidget}!scaleView@{scaleView}}
+\index{scaleView@{scaleView}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{scaleView()}{scaleView()}}
+{\footnotesize\ttfamily void Graph\+Widget\+::scale\+View (\begin{DoxyParamCaption}\item[{qreal}]{scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Zoom sur la scène. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & Facteur de zoom \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_widget_a206371195f6df1aaf5bd9b738085da9c}\label{class_graph_widget_a206371195f6df1aaf5bd9b738085da9c}} 
+\index{GraphWidget@{GraphWidget}!timerEvent@{timerEvent}}
+\index{timerEvent@{timerEvent}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{timerEvent()}{timerEvent()}}
+{\footnotesize\ttfamily void Graph\+Widget\+::timer\+Event (\begin{DoxyParamCaption}\item[{QTimer\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Gère les événements du timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Pointeur vers l\textquotesingle{}événement timer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+graphwidget.\+h\item 
+graphwidget.\+cpp\end{DoxyCompactItemize}

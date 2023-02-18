@@ -1,0 +1,151 @@
+\hypertarget{class_edge}{}\doxysection{Edge Class Reference}
+\label{class_edge}\index{Edge@{Edge}}
+
+
+La classe \mbox{\hyperlink{class_edge}{Edge}} représente une arête dans un graphe.  
+
+
+
+
+{\ttfamily \#include $<$edge.\+h$>$}
+
+Inheritance diagram for Edge\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_edge}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_edge_a1076c24a9c10f5e019ee362060200329}\label{class_edge_a1076c24a9c10f5e019ee362060200329}} 
+enum \{ {\bfseries Type} = User\+Type + 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_edge_afae876d5379d7f0f850cbc961d69b6b5}{Edge}} (\mbox{\hyperlink{class_node}{Node}} $\ast$\mbox{\hyperlink{class_edge_aa620dd494d9ad75a10e2800407478097}{source\+Node}}, \mbox{\hyperlink{class_node}{Node}} $\ast$\mbox{\hyperlink{class_edge_a3c9de73a06f270ffc6d3a6ff2ba5d4c6}{dest\+Node}}, QColor color, int edge\+Size)
+\begin{DoxyCompactList}\small\item\em Constructeur pour la classe \mbox{\hyperlink{class_edge}{Edge}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ \mbox{\hyperlink{class_edge_aa620dd494d9ad75a10e2800407478097}{source\+Node}} () const
+\begin{DoxyCompactList}\small\item\em Renvoie le nœud source de l\textquotesingle{}arête. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ \mbox{\hyperlink{class_edge_a3c9de73a06f270ffc6d3a6ff2ba5d4c6}{dest\+Node}} () const
+\begin{DoxyCompactList}\small\item\em Renvoie le nœud de destination de l\textquotesingle{}arête. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_edge_ab554a765fd7a57fcdf289aa51b4df328}{adjust}} ()
+\begin{DoxyCompactList}\small\item\em Ajuste la position des nœuds source et destination sur l\textquotesingle{}arête. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_edge_a9ae46eb35e91e2253434274458aaec55}\label{class_edge_a9ae46eb35e91e2253434274458aaec55}} 
+int {\bfseries type} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+QRectF \mbox{\hyperlink{class_edge_a414eb7f63b639f571e71f1e42198a795}{bounding\+Rect}} () const override
+\begin{DoxyCompactList}\small\item\em Renvoie la zone englobante pour l\textquotesingle{}arête. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_edge_a5ac25b0482fff6c68924031695fe4da7}{paint}} (QPainter $\ast$painter, const QStyle\+Option\+Graphics\+Item $\ast$option, QWidget $\ast$widget) override
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}arête. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe \mbox{\hyperlink{class_edge}{Edge}} représente une arête dans un graphe. 
+
+Elle est dérivée de QGraphics\+Item et est responsable de dessiner une arête entre deux nœuds dans un graphe. Elle stocke les informations sur les nœuds source et destination, la couleur et la taille de l\textquotesingle{}arête. La méthode \mbox{\hyperlink{class_edge_ab554a765fd7a57fcdf289aa51b4df328}{adjust()}} est utilisée pour ajuster la position des nœuds source et destination sur l\textquotesingle{}arête. La méthode \mbox{\hyperlink{class_edge_a5ac25b0482fff6c68924031695fe4da7}{paint()}} est utilisée pour dessiner l\textquotesingle{}arête en utilisant les informations stockées. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_edge_afae876d5379d7f0f850cbc961d69b6b5}\label{class_edge_afae876d5379d7f0f850cbc961d69b6b5}} 
+\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}}
+{\footnotesize\ttfamily Edge\+::\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{source\+Node,  }\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{dest\+Node,  }\item[{QColor}]{color,  }\item[{int}]{edge\+Size }\end{DoxyParamCaption})}
+
+
+
+Constructeur pour la classe \mbox{\hyperlink{class_edge}{Edge}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+Node} & Le nœud source pour l\textquotesingle{}arête. \\
+\hline
+{\em dest\+Node} & Le nœud de destination pour l\textquotesingle{}arête. \\
+\hline
+{\em color} & La couleur de l\textquotesingle{}arête. \\
+\hline
+{\em edge\+Size} & La taille de l\textquotesingle{}arête. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_edge_ab554a765fd7a57fcdf289aa51b4df328}\label{class_edge_ab554a765fd7a57fcdf289aa51b4df328}} 
+\index{Edge@{Edge}!adjust@{adjust}}
+\index{adjust@{adjust}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{adjust()}{adjust()}}
+{\footnotesize\ttfamily void Edge\+::adjust (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ajuste la position des nœuds source et destination sur l\textquotesingle{}arête. 
+
+Cette méthode calcule la position des nœuds source et destination sur l\textquotesingle{}arête en fonction de la position de chaque nœud sur le graphe. \mbox{\Hypertarget{class_edge_a414eb7f63b639f571e71f1e42198a795}\label{class_edge_a414eb7f63b639f571e71f1e42198a795}} 
+\index{Edge@{Edge}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{boundingRect()}{boundingRect()}}
+{\footnotesize\ttfamily QRectF Edge\+::bounding\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Renvoie la zone englobante pour l\textquotesingle{}arête. 
+
+\begin{DoxyReturn}{Returns}
+La zone englobante. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a3c9de73a06f270ffc6d3a6ff2ba5d4c6}\label{class_edge_a3c9de73a06f270ffc6d3a6ff2ba5d4c6}} 
+\index{Edge@{Edge}!destNode@{destNode}}
+\index{destNode@{destNode}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{destNode()}{destNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} $\ast$ Edge\+::dest\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Renvoie le nœud de destination de l\textquotesingle{}arête. 
+
+\begin{DoxyReturn}{Returns}
+Le nœud de destination. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a5ac25b0482fff6c68924031695fe4da7}\label{class_edge_a5ac25b0482fff6c68924031695fe4da7}} 
+\index{Edge@{Edge}!paint@{paint}}
+\index{paint@{paint}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Edge\+::paint (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter,  }\item[{const QStyle\+Option\+Graphics\+Item $\ast$}]{option,  }\item[{QWidget $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Dessine l\textquotesingle{}arête. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Le peintre utilisé pour dessiner l\textquotesingle{}arête. \\
+\hline
+{\em option} & Les options de style pour dessiner l\textquotesingle{}arête. \\
+\hline
+{\em widget} & Le widget parent pour dessiner l\textquotesingle{}arête.\\
+\hline
+\end{DoxyParams}
+Cette méthode utilise les informations stockées \mbox{\Hypertarget{class_edge_aa620dd494d9ad75a10e2800407478097}\label{class_edge_aa620dd494d9ad75a10e2800407478097}} 
+\index{Edge@{Edge}!sourceNode@{sourceNode}}
+\index{sourceNode@{sourceNode}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{sourceNode()}{sourceNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} $\ast$ Edge\+::source\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Renvoie le nœud source de l\textquotesingle{}arête. 
+
+\begin{DoxyReturn}{Returns}
+Le nœud source. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+edge.\+h\item 
+edge.\+cpp\end{DoxyCompactItemize}
